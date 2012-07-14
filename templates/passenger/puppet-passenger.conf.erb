@@ -1,8 +1,8 @@
 # File Managed by Puppet
 
 Listen <%= port %>
-
-<VirtualHost *:<%= port %>>
+NameVirtualHost <%= name %>:<%= port %>
+<VirtualHost <%= name %>:<%= port %>>
         # you probably want to tune these settings
         PassengerHighPerformance on
         PassengerMaxPoolSize 12
