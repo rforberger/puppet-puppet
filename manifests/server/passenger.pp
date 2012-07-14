@@ -28,7 +28,7 @@ class puppet::server::passenger {
     content => template('puppet/passenger/config.ru'),
   }
 
-  apache::vhost { 'puppetmaster':
+  apache::vhost { $puppet::server:
     port     => '8140',
     priority => '10',
     docroot  => '/etc/puppet/rack/public/',
