@@ -3,3 +3,9 @@
 [plugins]
 <% scope.lookupvar('puppet::allow').each do |pa| %>  allow <%= pa %>
 <% end -%>
+
+[ssl]
+  path /dist/etc/ssl
+  <% scope.lookupvar('puppet::allow').each do |pa| %>  allow <%= pa %>
+  <% end -%>
+
