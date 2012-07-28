@@ -28,7 +28,7 @@ class puppet::params {
   $environment = 'production'
   $allow = $::domain ? {
     ''      => [ '127.0.0.1' ],
-    default => [ "*.$::domain" , '127.0.0.1' ],
+    default => [ "*.$::domain" , '127.0.0.1', '::1' ],
   }
   $bindaddress = '0.0.0.0'
   $listen = false
